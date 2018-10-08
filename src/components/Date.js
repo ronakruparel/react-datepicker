@@ -54,16 +54,15 @@ class Date extends Component {
         this.state = {
             selectedDate: ''
         }
-        this.handleChange = this.handleChange.bind(this);
     }
-    handleChange(date) {
+    handleChange = (date) => {
         this.setState({
             selectedDate: date.format(dateFormat)
         })
     }
     availableDates(dateArray) {
-        let priority={
-            appointmentDate:response.marriageAppointmentDate
+        let priority = {
+            appointmentDate: response.marriageAppointmentDate
         }
         dateArray.push(priority)
         return dateArray.map(date => {
